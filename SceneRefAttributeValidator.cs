@@ -497,11 +497,8 @@ namespace KBCore.Refs
             {
                 case Component valueC:
                     return ValidateRefLocation(loc, c, field, valueC);
-
-                case ScriptableObject _:
-                    return ValidateRefLocationAnywhere(loc, c, field);
-
-                case GameObject _:
+                
+                case Object _:
                     return ValidateRefLocationAnywhere(loc, c, field);
 
                 default:
